@@ -1,0 +1,25 @@
+baseURL = "/"
+languageCode = "en-us"
+theme = "SimpleIntro"
+title = "Waris Amin"
+publishDir = "public"
+
+[params]
+    mainbg = "https://picsum.photos/1920/1080"
+    name = "Waris Amin"
+    mainTitle = "Waris Amin"
+    mainText = "Full stack Software developer"
+
+[menus]
+    [[menu.main]]
+        identifier = "about"
+        name = "About"
+        url = "#about"
+    [[menu.main]]
+        identifier = "skills"
+        name = "Skills"
+        url = "#skills"
+    [[menu.main]]
+        identifier = "projects"
+        name = "Projects"
+        url = "#projects"

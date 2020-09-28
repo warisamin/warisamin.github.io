@@ -1,0 +1,24 @@
+[[list]]
+    name = "Python"
+    icon = "https://devicons.github.io/devicon/devicon.git/icons/python/python-original.svg"
+    text = """
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+        Voluptatibus quia, nulla! Maiores et perferendis eaque,
+        exercitationem praesentium nihil.
+    """
+[[list]]
+    name = "postgresql"
+    icon = "https://devicons.github.io/devicon/devicon.git/icons/postgresql/postgresql-original.svg"
+    text = """
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+        Voluptatibus quia, nulla! Maiores et perferendis eaque,
+        exercitationem praesentium nihil.
+    """
+[[list]]
+    name = "Django"
+    icon = "https://devicons.github.io/devicon/devicon.git/icons/django/django-original.svg"
+    text = """
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+        Voluptatibus quia, nulla! Maiores et perferendis eaque,
+        exercitationem praesentium nihil.
+    """

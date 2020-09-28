@@ -1,0 +1,12 @@
+[[list]]
+    title = "Firewall"
+    image = "https://picsum.photos/400/200"
+    text = """
+        Worked on the world’s first adaptive computer vision-based firewall.
+    """
+[[list]]
+    title = "Kognetics"
+    image = "https://picsum.photos/400/200"
+    text = """
+        Developed Financial Data Ingestion Process, reporting software and website for Kognetics.
+    """

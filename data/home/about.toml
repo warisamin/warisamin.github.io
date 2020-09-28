@@ -1,0 +1,25 @@
+title = "Highlights"
+
+text = """
+
+I am a passionate professional who vehemently solves problems. Love to work in challenging environments
+that help to develop my inbuilt skills and the ones that I have acquired. During the course of these years,
+I touched multiple business verticals which include fintech markets and RPA (Robotic Process Automation) and
+I come up with creative ideas that are immediately required in demanding situations.
+"""
+
+[[link]]
+    icon = "fab fa-github"
+    url = "https://github.com/warisamin"
+[[link]]
+    icon = "fab fa-linkedin"
+    url = "www.linkedin.com/in/warisamin"
+[[link]]
+    icon = "fas fa-envelope"
+    url = "mailto:warisamin@gmail.com"
+[[link]]
+    icon = "fab fa-instagram"
+    url = "#"
+[[link]]
+    icon = "fab fa-facebook"
+    url = "https://www.facebook.com/warisaminmir/"
