@@ -213,6 +213,8 @@ section {
   border-color: var(--accent);
 }
 
+.badge.cv { background: linear-gradient(135deg, #ee7785, #f6a6b2); }
+.badge.pd { background: linear-gradient(135deg, #b794f4, #d6bcfa); }
 .badge.py { background: linear-gradient(135deg, #ffd54f, #ffe082); }
 .badge.dj { background: linear-gradient(135deg, #4fd1c5, #81e6d9); }
 .badge.pg { background: linear-gradient(135deg, #90cdf4, #bee3f8); }
@@ -288,8 +290,12 @@ section {
   background: linear-gradient(135deg, #4fd1c5, #2c7a7b);
 }
 
+.project-card .project-image.icon-tile.kognetics {
+  background: linear-gradient(135deg, #b794f4, #553c9a);
+}
+
 .project-card .project-image.icon-tile span {
-  font-size: 4rem;
+  font-size: 3.5rem;
   font-weight: 800;
   color: #fff;
   letter-spacing: 1px;
@@ -305,9 +311,21 @@ section {
 }
 
 .project-card p {
-  margin: 0;
+  margin: 0 0 12px;
   color: var(--text-dim);
   font-size: 0.95rem;
+}
+
+.project-card .project-link {
+  display: inline-block;
+  color: var(--accent);
+  text-decoration: none;
+  font-size: 0.9rem;
+  font-weight: 600;
+}
+
+.project-card .project-link:hover {
+  color: var(--accent-2);
 }
 
 /* Contact */
