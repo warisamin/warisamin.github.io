@@ -193,6 +193,57 @@ section {
   font-size: 1.05rem;
 }
 
+/* Experience */
+.experience-list {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.experience-item {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 24px;
+  transition: border-color 0.2s;
+}
+
+.experience-item:hover {
+  border-color: var(--accent);
+}
+
+.experience-head {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 8px;
+}
+
+.experience-head h3 {
+  margin: 0;
+  font-size: 1.15rem;
+}
+
+.experience-dates {
+  color: var(--accent);
+  font-size: 0.9rem;
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+.experience-org {
+  color: var(--text-dim);
+  font-size: 0.9rem;
+  margin: 4px 0 12px;
+}
+
+.experience-item p {
+  margin: 0;
+  color: var(--text-dim);
+  font-size: 0.95rem;
+}
+
 /* Skills */
 .skills-grid {
   display: grid;
@@ -216,8 +267,12 @@ section {
 .badge.cv { background: linear-gradient(135deg, #ee7785, #f6a6b2); }
 .badge.pd { background: linear-gradient(135deg, #b794f4, #d6bcfa); }
 .badge.py { background: linear-gradient(135deg, #ffd54f, #ffe082); }
-.badge.dj { background: linear-gradient(135deg, #4fd1c5, #81e6d9); }
 .badge.pg { background: linear-gradient(135deg, #90cdf4, #bee3f8); }
+.badge.ai { background: linear-gradient(135deg, #4fd1c5, #81e6d9); }
+.badge.dp { background: linear-gradient(135deg, #f6ad55, #fbd38d); }
+.badge.sd { background: linear-gradient(135deg, #68d391, #9ae6b4); }
+.badge.pm { background: linear-gradient(135deg, #7f9cf5, #a3bffa); }
+.badge.cl { background: linear-gradient(135deg, #4299e1, #63b3ed); }
 
 .skill-card .skill-head {
   display: flex;
@@ -292,6 +347,14 @@ section {
 
 .project-card .project-image.icon-tile.kognetics {
   background: linear-gradient(135deg, #b794f4, #553c9a);
+}
+
+.project-card .project-image.icon-tile.algotrader {
+  background: linear-gradient(135deg, #f6ad55, #c05621);
+}
+
+.project-card .project-image.icon-tile.jkcpis {
+  background: linear-gradient(135deg, #68d391, #276749);
 }
 
 .project-card .project-image.icon-tile span {
