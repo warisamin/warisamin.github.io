@@ -66,6 +66,7 @@
     <li><a href="#about">About</a></li>
     <li><a href="#experience">Experience</a></li>
     <li><a href="#projects">Projects</a></li>
+    <li><a href="#demos">Demos</a></li>
     <li><a href="#skills">Skills</a></li>
     <li><a href="#contact" class="nav-cta">Let's talk</a></li>
   </ul>
@@ -419,10 +420,102 @@
     </div>
   </section>
 
-  <section id="skills" class="sec">
+  <section id="demos" class="sec">
     <div class="container sec-inner">
       <header class="sec-head">
         <span class="sec-num">04</span>
+        <h2>In action</h2>
+      </header>
+      <div class="sec-body">
+        <div class="demos-intro reveal">
+          <p>Two small, looping illustrations of the ideas behind my work. They are simplified and use made-up data — they are not product screenshots.</p>
+          <button type="button" class="demo-toggle" id="demo-toggle" aria-pressed="false">Pause demos</button>
+        </div>
+
+        <figure class="demo reveal" data-loop="9000">
+          <figcaption>
+            <h3>Reading a screen the way a person does</h3>
+            <p>The OCR model I built for the Privacy Enhanced Gateway recognizes the text, labels, and controls in software screenshots. Knowing what each region is makes it possible to redact the private ones.</p>
+          </figcaption>
+          <div class="demo-frame" role="img" aria-label="Illustration: an OCR model sweeps over a screenshot of an invoice screen, draws a box around each element, and lists each one with its type, text, and confidence.">
+            <div class="screen-bar" aria-hidden="true">
+              <i></i><i></i><i></i>
+              <span class="screen-title">ocr &middot; ui-screenshot.png</span>
+              <span class="screen-status"><b></b>model running</span>
+            </div>
+            <div class="demo-body" aria-hidden="true">
+              <div class="pane pane-ruled">
+                <div class="col-head"><span>Input &middot; screenshot</span></div>
+                <div class="shot">
+                  <div class="shot-top"><span class="t">Invoices<span class="dbox" data-at="500"><b>LABEL</b></span></span></div>
+                  <div class="shot-main">
+                    <div class="shot-h"><span class="t">INV-0042<span class="dbox" data-at="950"><b>TITLE</b></span></span></div>
+                    <div class="shot-row"><span class="shot-k">Vendor</span><span class="t">Acme Supply Co.<span class="dbox" data-at="1400"><b>TEXT</b></span></span></div>
+                    <div class="shot-row"><span class="shot-k">Amount</span><span class="t">$1,280.00<span class="dbox" data-at="1850"><b>TEXT</b></span></span></div>
+                    <div class="shot-actions"><span class="t shot-btn">Approve<span class="dbox" data-at="2300"><b>BUTTON</b></span></span></div>
+                  </div>
+                  <div class="sweep" data-at="150"></div>
+                </div>
+              </div>
+              <div class="pane">
+                <div class="col-head out-head"><span>Type</span><span>Text read</span><span>Conf.</span></div>
+                <div class="out-row" data-at="800"><span class="ty">Label</span><span class="tx">Invoices</span><span class="cf">0.99</span></div>
+                <div class="out-row" data-at="1250"><span class="ty">Title</span><span class="tx">INV-0042</span><span class="cf">0.99</span></div>
+                <div class="out-row" data-at="1700"><span class="ty">Text</span><span class="tx">Acme Supply Co.</span><span class="cf">0.98</span></div>
+                <div class="out-row" data-at="2150"><span class="ty">Text</span><span class="tx">$1,280.00</span><span class="cf">0.99</span></div>
+                <div class="out-row" data-at="2600"><span class="ty">Button</span><span class="tx">Approve</span><span class="cf">0.97</span></div>
+              </div>
+            </div>
+            <div class="screen-foot" aria-hidden="true">
+              <span>5 elements found</span><span data-at="3200">5 strings read</span><span data-at="3200">typed and scored</span>
+            </div>
+          </div>
+        </figure>
+
+        <figure class="demo reveal" data-loop="10500">
+          <figcaption>
+            <h3>From observed work to automation</h3>
+            <p>Process Discovery captures how work actually moves across applications, maps it as a process, and turns that map into automation.</p>
+          </figcaption>
+          <div class="demo-frame" role="img" aria-label="Illustration: four manual steps across mail, PDF, and ERP applications are captured one by one, mapped into a four-step flow, and then run automatically by a bot.">
+            <div class="screen-bar" aria-hidden="true">
+              <i></i><i></i><i></i>
+              <span class="screen-title">process-discovery &middot; session</span>
+              <span class="screen-status"><b></b>live session</span>
+            </div>
+            <div class="demo-body" aria-hidden="true">
+              <div class="pane pane-log">
+                <div class="col-head"><span>Observed work</span></div>
+                <div class="log-row" data-at="300"><span class="app">Mail</span>Open the invoice email</div>
+                <div class="log-row" data-at="1100"><span class="app">PDF</span>Read vendor and amount</div>
+                <div class="log-row" data-at="1900"><span class="app">ERP</span>Enter the invoice details</div>
+                <div class="log-row" data-at="2700"><span class="app">ERP</span>Click Submit</div>
+                <div class="rubber" data-at="8000">Automated</div>
+              </div>
+              <div class="pane">
+                <div class="col-head"><span>Discovered flow</span><span class="run-badge" data-at="4700">Bot run</span></div>
+                <div class="flow">
+                  <span class="flow-line" data-at="3800"></span>
+                  <div class="flow-step" data-at="700"><span class="node"><i data-at="5100"></i></span>Open invoice</div>
+                  <div class="flow-step" data-at="1500"><span class="node"><i data-at="5800"></i></span>Extract fields</div>
+                  <div class="flow-step" data-at="2300"><span class="node"><i data-at="6500"></i></span>Fill ERP form</div>
+                  <div class="flow-step" data-at="3100"><span class="node"><i data-at="7200"></i></span>Submit</div>
+                </div>
+              </div>
+            </div>
+            <div class="screen-foot" aria-hidden="true">
+              <span>4 steps captured</span><span data-at="3800">1 flow discovered</span><span data-at="8000">bot run complete</span>
+            </div>
+          </div>
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <section id="skills" class="sec">
+    <div class="container sec-inner">
+      <header class="sec-head">
+        <span class="sec-num">05</span>
         <h2>Skills</h2>
       </header>
       <div class="sec-body">
@@ -487,7 +580,7 @@
 
   <section id="contact" class="contact">
     <div class="container">
-      <div class="contact-eyebrow reveal"><span class="sec-num">05</span> Contact</div>
+      <div class="contact-eyebrow reveal"><span class="sec-num">06</span> Contact</div>
       <h2 class="reveal">Let's build something <em>together.</em></h2>
       <div class="contact-grid reveal">
         <p>Whether it's a role, a collaboration, or a hard AI/ML problem you'd like a second opinion on — my inbox is always open.</p>
@@ -604,6 +697,73 @@
       done(false);
     }
   });
+
+  // Demos: a small timeline per demo. Without JS (or with reduced motion)
+  // each demo simply shows its finished state.
+  var demoEls = Array.prototype.slice.call(document.querySelectorAll('.demo'));
+  var demoToggle = document.getElementById('demo-toggle');
+  var reduceMotion = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  if (demoEls.length && !reduceMotion && 'IntersectionObserver' in window) {
+    var demosPaused = false;
+    var demos = demoEls.map(function (el) {
+      var steps = Array.prototype.slice.call(el.querySelectorAll('[data-at]'));
+      var loop = parseInt(el.getAttribute('data-loop'), 10) || 9000;
+      var timers = [];
+      var demo = { el: el, frame: el.querySelector('.demo-frame') || el, inView: false, playing: false };
+
+      function clear() {
+        timers.forEach(clearTimeout);
+        timers = [];
+      }
+
+      function run() {
+        clear();
+        steps.forEach(function (s) { s.classList.remove('on'); });
+        steps.forEach(function (s) {
+          timers.push(setTimeout(function () { s.classList.add('on'); }, 400 + parseInt(s.getAttribute('data-at'), 10)));
+        });
+        timers.push(setTimeout(run, loop + 400));
+      }
+
+      demo.play = function () {
+        if (demo.playing) { return; }
+        demo.playing = true;
+        el.classList.add('anim');
+        run();
+      };
+
+      // Stopping leaves the finished state on screen.
+      demo.stop = function () {
+        demo.playing = false;
+        clear();
+        steps.forEach(function (s) { s.classList.add('on'); });
+      };
+
+      return demo;
+    });
+
+    var demoObserver = new IntersectionObserver(function (entries) {
+      entries.forEach(function (entry) {
+        demos.forEach(function (demo) {
+          if (demo.frame !== entry.target) { return; }
+          demo.inView = entry.isIntersecting;
+          if (demo.inView && !demosPaused) { demo.play(); } else { demo.stop(); }
+        });
+      });
+    }, { threshold: 0.5 });
+    demos.forEach(function (demo) { demoObserver.observe(demo.frame); });
+
+    demoToggle.classList.add('ready');
+    demoToggle.addEventListener('click', function () {
+      demosPaused = !demosPaused;
+      demoToggle.setAttribute('aria-pressed', demosPaused ? 'true' : 'false');
+      demoToggle.textContent = demosPaused ? 'Play demos' : 'Pause demos';
+      demos.forEach(function (demo) {
+        if (demosPaused || !demo.inView) { demo.stop(); } else { demo.play(); }
+      });
+    });
+  }
 
   var reveals = document.querySelectorAll('.reveal');
   if ('IntersectionObserver' in window) {

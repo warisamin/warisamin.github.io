@@ -523,8 +523,16 @@ nav ul li a.nav-cta.active {
   border: 1.5px solid var(--ink);
 }
 
+.screen-bar i {
+  flex-shrink: 0;
+}
+
 .screen-title {
   margin-left: 8px;
+  min-width: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
 
 .screen-status {
@@ -532,6 +540,8 @@ nav ul li a.nav-cta.active {
   display: inline-flex;
   align-items: center;
   gap: 7px;
+  flex-shrink: 0;
+  white-space: nowrap;
   color: var(--accent-ink);
   font-weight: 600;
 }
@@ -1175,6 +1185,538 @@ nav ul li a.nav-cta.active {
   transform: translateX(4px);
 }
 
+/* Demos */
+.demos-intro {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 24px;
+  margin-bottom: 48px;
+}
+
+.demos-intro p {
+  margin: 0;
+  color: var(--ink-2);
+  font-size: 1.03rem;
+  max-width: 36em;
+}
+
+.demo-toggle {
+  display: none;
+  align-items: center;
+  gap: 9px;
+  flex-shrink: 0;
+  padding: 7px 14px;
+  border: 1.5px solid var(--ink);
+  border-radius: 999px;
+  background: transparent;
+  color: var(--ink);
+  font-family: var(--mono);
+  font-size: 0.68rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  white-space: nowrap;
+  cursor: pointer;
+  transition: background 0.2s, color 0.2s;
+}
+
+.demo-toggle.ready {
+  display: inline-flex;
+}
+
+.demo-toggle::before {
+  content: "";
+  width: 8px;
+  height: 8px;
+  background: var(--accent);
+}
+
+.demo-toggle[aria-pressed="true"]::before {
+  width: 0;
+  height: 0;
+  background: none;
+  border-style: solid;
+  border-width: 5px 0 5px 8px;
+  border-color: transparent transparent transparent var(--accent);
+}
+
+.demo-toggle:hover {
+  background: var(--ink);
+  color: var(--paper);
+}
+
+.demo {
+  margin: 0 0 72px;
+}
+
+.demo:last-child {
+  margin-bottom: 0;
+}
+
+.demo figcaption {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1.25fr);
+  gap: 40px;
+  align-items: start;
+  margin-bottom: 24px;
+}
+
+.demo figcaption h3 {
+  font-size: 1.9rem;
+}
+
+.demo figcaption p {
+  margin: 0;
+  color: var(--ink-2);
+  font-size: 0.97rem;
+}
+
+.demo-frame {
+  background: var(--card);
+  border: 1.5px solid var(--ink);
+  border-radius: var(--radius);
+  box-shadow: 8px 8px 0 var(--ink);
+  overflow: hidden;
+}
+
+.demo-body {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.pane {
+  position: relative;
+  min-width: 0;
+  padding: 22px 26px 28px;
+}
+
+.pane + .pane {
+  border-left: 1.5px solid var(--ink);
+}
+
+.pane-ruled {
+  background-image: linear-gradient(rgba(22, 19, 15, 0.06) 1px, transparent 1px);
+  background-size: 100% 28px;
+}
+
+.col-head {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 18px;
+  font-family: var(--mono);
+  font-size: 0.64rem;
+  font-weight: 500;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--ink-3);
+}
+
+/* Shared: a detection box drawn around a piece of text */
+.t {
+  position: relative;
+  display: inline-block;
+}
+
+.dbox {
+  position: absolute;
+  inset: -4px -7px;
+  border: 1.5px solid var(--accent);
+  border-radius: 3px;
+  background: rgba(226, 68, 47, 0.07);
+  pointer-events: none;
+}
+
+.dbox b {
+  position: absolute;
+  top: -9px;
+  left: 6px;
+  padding: 0 6px;
+  border-radius: 2px;
+  background: var(--accent-ink);
+  color: #fff;
+  font-family: var(--mono);
+  font-size: 0.54rem;
+  font-weight: 700;
+  line-height: 1.6;
+  letter-spacing: 0.06em;
+}
+
+/* OCR demo: the mock screenshot */
+.shot {
+  position: relative;
+  border: 1.5px solid var(--ink);
+  border-radius: 4px;
+  background: var(--paper);
+  overflow: hidden;
+}
+
+.shot-top {
+  padding: 10px 16px 8px;
+  border-bottom: 1.5px solid var(--ink);
+  background: var(--paper-2);
+  font-family: var(--mono);
+  font-size: 0.7rem;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+.shot-main {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 16px;
+  padding: 22px 18px 20px;
+}
+
+.shot-h {
+  font-family: var(--serif);
+  font-size: 1.7rem;
+  line-height: 1;
+}
+
+.shot-row {
+  display: grid;
+  grid-template-columns: 62px auto;
+  align-items: baseline;
+  font-size: 0.86rem;
+  font-weight: 500;
+}
+
+.shot-k {
+  font-family: var(--mono);
+  font-size: 0.62rem;
+  font-weight: 500;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--ink-3);
+}
+
+.shot-actions {
+  margin-top: 4px;
+}
+
+.shot-btn {
+  padding: 5px 16px;
+  border-radius: 999px;
+  background: var(--ink);
+  color: var(--paper);
+  font-size: 0.76rem;
+  font-weight: 600;
+}
+
+.shot-btn .dbox {
+  inset: -5px;
+  border-radius: 999px;
+}
+
+.sweep {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: -30%;
+  height: 30%;
+  background: linear-gradient(180deg, rgba(226, 68, 47, 0), rgba(226, 68, 47, 0.16));
+  border-bottom: 1.5px solid var(--accent);
+  opacity: 0;
+  pointer-events: none;
+}
+
+.demo.anim .sweep.on {
+  animation: sweep 2.5s linear both;
+}
+
+@keyframes sweep {
+  from { top: -30%; opacity: 1; }
+  to { top: 100%; opacity: 1; }
+}
+
+/* OCR demo: what the model read */
+.out-head,
+.out-row {
+  display: grid;
+  grid-template-columns: 62px minmax(0, 1fr) 42px;
+  gap: 12px;
+  align-items: baseline;
+}
+
+.out-head {
+  margin-bottom: 0;
+  padding-bottom: 10px;
+  border-bottom: 1px solid var(--ink);
+}
+
+.out-head span:last-child,
+.out-row .cf {
+  text-align: right;
+}
+
+.out-row {
+  padding: 11px 0;
+  border-bottom: 1px solid var(--rule);
+  font-family: var(--mono);
+  font-size: 0.8rem;
+}
+
+.out-row .ty {
+  font-size: 0.6rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--accent-ink);
+}
+
+.out-row .tx {
+  font-weight: 500;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.out-row .cf {
+  color: var(--ink-3);
+}
+
+/* Automation demo */
+.log-row {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 11px 0;
+  border-bottom: 1px solid var(--rule);
+  font-size: 0.9rem;
+}
+
+.app {
+  flex-shrink: 0;
+  min-width: 44px;
+  padding: 2px 7px;
+  border: 1px solid var(--ink-3);
+  border-radius: 3px;
+  font-family: var(--mono);
+  font-size: 0.6rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-align: center;
+  text-transform: uppercase;
+  color: var(--ink-2);
+}
+
+.rubber {
+  position: absolute;
+  right: 22px;
+  bottom: 20px;
+  padding: 7px 14px 6px;
+  border: 2.5px solid var(--accent-ink);
+  border-radius: 4px;
+  box-shadow: inset 0 0 0 2px var(--card), inset 0 0 0 3.5px var(--accent-ink);
+  background: rgba(251, 249, 244, 0.9);
+  color: var(--accent-ink);
+  font-family: var(--mono);
+  font-size: 0.72rem;
+  font-weight: 800;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  transform: rotate(-7deg);
+}
+
+.run-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  font-weight: 700;
+  color: var(--accent-ink);
+}
+
+.run-badge::before {
+  content: "";
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--accent);
+}
+
+.flow {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  padding-top: 2px;
+}
+
+.flow-line {
+  position: absolute;
+  left: 12px;
+  top: 14px;
+  bottom: 14px;
+  width: 1.5px;
+  background: var(--ink);
+  transform-origin: 50% 0;
+}
+
+.flow-step {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  font-size: 0.92rem;
+  font-weight: 500;
+}
+
+.node {
+  position: relative;
+  z-index: 1;
+  width: 26px;
+  height: 26px;
+  flex-shrink: 0;
+  border: 1.5px solid var(--ink);
+  border-radius: 50%;
+  background: var(--card);
+  overflow: hidden;
+}
+
+.node i {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  background: var(--accent);
+}
+
+.node i::after {
+  content: "";
+  width: 5px;
+  height: 9px;
+  margin-top: -2px;
+  border: solid #fff;
+  border-width: 0 2px 2px 0;
+  transform: rotate(45deg);
+}
+
+/* Timeline states. Only applied once the script takes over (.anim);
+   otherwise every step is simply visible. */
+.demo.anim .dbox {
+  opacity: 0;
+  transform: scale(1.12);
+  transition: opacity 0.25s ease, transform 0.25s ease;
+}
+
+.demo.anim .dbox.on {
+  opacity: 1;
+  transform: none;
+}
+
+.demo.anim .out-row,
+.demo.anim .log-row,
+.demo.anim .flow-step {
+  opacity: 0;
+  transform: translateY(6px);
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.demo.anim .out-row.on,
+.demo.anim .log-row.on,
+.demo.anim .flow-step.on {
+  opacity: 1;
+  transform: none;
+}
+
+.demo.anim .out-row .tx {
+  clip-path: inset(0 100% 0 0);
+  transition: clip-path 0.55s steps(12);
+}
+
+.demo.anim .out-row.on .tx {
+  clip-path: inset(0 0 0 0);
+}
+
+.demo.anim .flow-line {
+  transform: scaleY(0);
+  transition: transform 0.7s cubic-bezier(0.65, 0, 0.35, 1);
+}
+
+.demo.anim .flow-line.on {
+  transform: scaleY(1);
+}
+
+.demo.anim .node i {
+  transform: scale(0);
+  transition: transform 0.35s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+.demo.anim .node i.on {
+  transform: scale(1);
+}
+
+.demo.anim .run-badge,
+.demo.anim .screen-foot [data-at] {
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.demo.anim .run-badge.on,
+.demo.anim .screen-foot [data-at].on {
+  opacity: 1;
+}
+
+.demo.anim .rubber {
+  opacity: 0;
+  transform: rotate(-7deg) scale(1.5);
+  transition: opacity 0.2s ease, transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+.demo.anim .rubber.on {
+  opacity: 1;
+  transform: rotate(-7deg) scale(1);
+}
+
+@media (max-width: 900px) {
+  .demo figcaption {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 10px;
+  }
+}
+
+@media (max-width: 767px) {
+  .demos-intro {
+    flex-direction: column;
+    gap: 18px;
+    margin-bottom: 40px;
+  }
+
+  .demo {
+    margin-bottom: 56px;
+  }
+
+  .demo figcaption h3 {
+    font-size: 1.7rem;
+  }
+
+  .demo-frame {
+    box-shadow: 6px 6px 0 var(--ink);
+  }
+
+  .demo-body {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .pane {
+    padding: 20px 18px 24px;
+  }
+
+  .pane + .pane {
+    border-left: 0;
+    border-top: 1.5px solid var(--ink);
+  }
+
+  .pane-log {
+    padding-bottom: 64px;
+  }
+}
+
 /* Skills */
 .skills-grid {
   display: grid;
@@ -1533,6 +2075,10 @@ footer .container::before {
 }
 
 @media (max-width: 900px) {
+  nav ul {
+    gap: 22px;
+  }
+
   .hero-grid {
     grid-template-columns: minmax(0, 1fr);
     gap: 44px;
@@ -1863,6 +2409,7 @@ footer .container::before {
   }
 
   nav,
+  #demos,
   .scroll-progress,
   .hero-visual,
   .hero-actions,
